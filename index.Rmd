@@ -51,7 +51,7 @@ knitr::include_app("http://tjalling.econ.illinois.edu:8080/Rental_Housing_Discri
 
 ## Tablas
 ```{r}
-knitr::include_app("http://tjalling.econ.illinois.edu:8080/shiny_test/",
+knitr::include_url("http://tjalling.econ.illinois.edu:8080/shiny_test/",
   height = "600px")
 ```
 
