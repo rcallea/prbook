@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Shiny apps | Notas sobre Aprendizaje de Maquinas</title>
-  <meta name="description" content="3 Shiny apps | Notas sobre Aprendizaje de Maquinas" />
+  <title>Chapter 2 Leaflet | Notas sobre Aprendizaje de Maquinas</title>
+  <meta name="description" content="Chapter 2 Leaflet | Notas sobre Aprendizaje de Maquinas" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Shiny apps | Notas sobre Aprendizaje de Maquinas" />
+  <meta property="og:title" content="Chapter 2 Leaflet | Notas sobre Aprendizaje de Maquinas" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Shiny apps | Notas sobre Aprendizaje de Maquinas" />
+  <meta name="twitter:title" content="Chapter 2 Leaflet | Notas sobre Aprendizaje de Maquinas" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="leaflet.html"/>
-
+<link rel="prev" href="index.html"/>
+<link rel="next" href="shiny-apps.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -172,31 +172,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="shiny-apps" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> Shiny apps<a href="shiny-apps.html#shiny-apps" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="aplicaciones-interactivas" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Aplicaciones interactivas<a href="shiny-apps.html#aplicaciones-interactivas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="shiny-apps.html#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_app</span>(<span class="st">&quot;http://tjalling.econ.illinois.edu:8080/Rental_Housing_Discrimination_US/&quot;</span>,</span>
-<span id="cb2-2"><a href="shiny-apps.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="st">&quot;600px&quot;</span>)</span></code></pre></div>
-<iframe src="http://tjalling.econ.illinois.edu:8080/Rental_Housing_Discrimination_US/?showcase=0" width="672" height="600px" data-external="1">
-</iframe>
-</div>
-<div id="tablas" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Tablas<a href="shiny-apps.html#tablas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="shiny-apps.html#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_app</span>(<span class="st">&quot;http://tjalling.econ.illinois.edu:8080/shiny_test/&quot;</span>,</span>
-<span id="cb3-2"><a href="shiny-apps.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="st">&quot;600px&quot;</span>)</span></code></pre></div>
-<iframe src="http://tjalling.econ.illinois.edu:8080/shiny_test/?showcase=0" width="672" height="600px" data-external="1">
-</iframe>
-
-</div>
+<div id="leaflet" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Leaflet<a href="leaflet.html#leaflet" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="leaflet.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb1-2"><a href="leaflet.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="leaflet.html#cb1-3" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">leaflet</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="leaflet.html#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span>  <span class="co"># Add default OpenStreetMap map tiles</span></span>
+<span id="cb1-5"><a href="leaflet.html#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lng=</span><span class="fl">174.768</span>, <span class="at">lat=</span><span class="sc">-</span><span class="fl">36.852</span>, <span class="at">popup=</span><span class="st">&quot;The birthplace of R&quot;</span>)</span>
+<span id="cb1-6"><a href="leaflet.html#cb1-6" aria-hidden="true" tabindex="-1"></a>m  <span class="co"># Print the map</span></span></code></pre></div>
+<div id="htmlwidget-e2724c2da346c85c5333" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e2724c2da346c85c5333">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}</script>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="leaflet.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="shiny-apps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
