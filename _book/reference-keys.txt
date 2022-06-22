@@ -1,0 +1,7 @@
+pruebas-figuras
+motivación
+la-primera-victoria-y-derrota-de-ml
+leaflet
+shiny-apps
+aplicaciones-interactivas
+tablas

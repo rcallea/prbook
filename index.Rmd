@@ -1,0 +1,58 @@
+---
+title: "Notas sobre Aprendizaje de Maquinas"
+author: "Ignacio Sarmiento-Barbieri"
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook: default
+  #bookdown::pdf_book: default
+---
+
+
+# Pruebas figuras
+
+Esta es una figura interactiva de prueba
+
+```{r echo=FALSE, warning=FALSE}
+library(metricsgraphics)
+mjs_plot(mtcars, x=wt, y=mpg) %>%
+  mjs_point(color_accessor=carb, size_accessor=carb) %>%
+  mjs_labs(x="Weight of Car", y="Miles per Gallon")
+```  
+
+
+### Motivación
+
+#### La primera victoria y derrota de ML
+
+![image](figures/flu_trends.png)
+
+# Leaflet
+
+```{r}
+library(leaflet)
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+m  # Print the map
+```
+
+
+# Shiny apps
+
+## Aplicaciones interactivas 
+
+```{r}
+knitr::include_app("http://tjalling.econ.illinois.edu:8080/Rental_Housing_Discrimination_US/",
+  height = "600px")
+```
+
+
+## Tablas
+```{r}
+knitr::include_app("http://tjalling.econ.illinois.edu:8080/shiny_test/",
+  height = "600px")
+```
+
+
