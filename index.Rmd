@@ -43,14 +43,14 @@ m  # Print the map
 
 ## Aplicaciones interactivas 
 
-```{r}
+```{r, out.extra="data-external=1"}
 knitr::include_app("http://tjalling.econ.illinois.edu:8080/Rental_Housing_Discrimination_US/",
   height = "600px")
 ```
 
 
 ## Tablas
-```{r}
+```{r, out.extra="data-external=2"}
 knitr::include_url("http://tjalling.econ.illinois.edu:8080/shiny_test/",
   height = "600px")
 ```
